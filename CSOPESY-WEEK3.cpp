@@ -11,8 +11,15 @@ int main() {
 
     while (true) {
 
-        std::cout << "Enter a command: ";
-        std::getline(std::cin, input);
+        if (manager.getCurrentConsoleName() == "MAIN_MENU") {
+            std::cout << "Enter a command: ";
+            std::getline(std::cin, input);
+        }
+        else {
+            std::cout << "root:\\>";
+            std::getline(std::cin, input);
+        }
+       
 
         if (input == "exit" && manager.getCurrentConsoleName() == "MAIN_MENU") {
 
